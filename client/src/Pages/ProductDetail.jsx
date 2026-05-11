@@ -14,7 +14,7 @@ export default function ProductDetail() {
   const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`https://stylestore-fullstack.onrender.com/api/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);

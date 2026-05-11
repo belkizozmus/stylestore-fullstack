@@ -40,7 +40,7 @@ export default function Returns() {
     try {
       const fullPhone = phone ? `${selectedPhoneCode.dial} ${phone}`.trim() : '';
       
-      let url = `http://localhost:5000/api/orders/search?`;
+      let url = `https://stylestore-fullstack.onrender.com/api/orders/search?`;
       if (email) url += `email=${encodeURIComponent(email)}`;
       if (phone) url += `&phone=${encodeURIComponent(fullPhone)}`;
 
@@ -75,7 +75,7 @@ export default function Returns() {
         iban: `TR${iban}` 
       };
 
-      const response = await fetch('http://localhost:5000/api/returns', {
+      const response = await fetch('https://stylestore-fullstack.onrender.com/api/returns', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(returnData)

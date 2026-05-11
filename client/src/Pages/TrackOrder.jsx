@@ -11,7 +11,7 @@ export default function TrackOrder() {
     setLoading(true);
     try {
       const cleanId = orderId.replace('#', '');
-      const response = await fetch(`http://localhost:5000/api/orders/${cleanId}`);
+      const response = await fetch(`https://stylestore-fullstack.onrender.com/api/orders/${cleanId}`);
       
       if (response.ok) {
         const data = await response.json();

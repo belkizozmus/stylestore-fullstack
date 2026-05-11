@@ -5,7 +5,7 @@ export default function Home() {
   const [trendingProducts, setTrendingProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch('https://stylestore-fullstack.onrender.com/api/products')
       .then(res => res.json())
       .then(data => {
         setTrendingProducts(data.slice(0, 3)); 
